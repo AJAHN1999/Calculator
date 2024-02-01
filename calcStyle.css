@@ -40,26 +40,40 @@ body{
     width:60px;
     margin: 10px;
     border-radius: 5px;
-    box-shadow: 10px 5px 5px rgb(255, 196, 0);;
+    box-shadow: 10px 5px 5px rgb(255, 196, 0);
+    font-size: large;
+}
+
+.clearButton, .deleteButton{
+    width: 140px;
+    flex-basis: auto;
+    color:  rgb(180, 109, 46);
+    /* background-color:  rgb(219, 118, 29); */
 }
 
 .calculatorBody .display{
     height:90px;
     width:340px;
-    border: 0.2px seashell solid;
+    border: 0.2px rgb(12, 12, 12) solid;
     border-radius: 20px;
     background-color: antiquewhite;
     display: flex;
     justify-content: end;
-    /* flex-direction: column; */
+    align-items: center;
+    overflow:hidden;
+    flex-wrap:wrap;
 }
 
-/* .display .display1{
-    font-size: 10px;
-    background-color: rgb(30, 111, 182);
-} */
 
-.displayValue{
+
+
+.calculatorBody .display p{
     margin: 5px;
     font-size: 40px;
+    color: rgb(182, 96, 21);    
+}
+
+.tail p{
+    font-size: large;
+    color:   rgb(231, 179, 134);
 }

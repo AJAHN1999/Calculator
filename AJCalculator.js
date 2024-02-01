@@ -2,6 +2,7 @@ const display = document.querySelector(".displayValue");
 const numberButtons = document.querySelectorAll(".restButtons");
 const operateButtons = document.querySelectorAll(".operateButtons");
 const equalButton = document.querySelector(".equalButton");
+const deleteButton = document.querySelector(".deleteButton");
 
 let currentOperation={
     number1:'',
@@ -48,13 +49,13 @@ function checkButtonType(event){
 
 operateButtons.forEach(operateButton =>{operateButton.addEventListener("click",()=>{
     if(currentOperation["operator"]===''||(currentOperation['number2']==='')){
-        currentOperation["operator"]=operateButton.textContent;
+        currentOperation["operator"]=operateButton.value;
         //display.textContent+=operateButton.textContent;
         displayCurrentOperation();
     }
     else{
             calculateResult();
-            currentOperation["operator"]=operateButton.textContent;
+            currentOperation["operator"]=operateButton.value;
             //display.textContent+=operateButton.textContent;
             displayCurrentOperation();
     }
@@ -116,11 +117,11 @@ function operate(no1,operator,no2){
         case "-":
             return subtract(no1,no2);
             //break;
-        case "*":
+        case "×":
             return multiply(no1,no2);
             //break;
-        case "/":
-            if(divide(no1,no2)===Infinity){
+        case "÷":
+            if(no2==0){
                 alert("you cannot divide by zero");
                 return null;
             }
@@ -135,6 +136,15 @@ function operate(no1,operator,no2){
 
 
 //DE button functionality
+deleteButton.addEventListener("click",()=>{
+    if(currentOperation.operator===''){
+        currentOperation.number1=currentOperation.number1.slice(0,-1);
+    }
+    else{
+        currentOperation.number2=currentOperation.number2.slice(0,-1);
+    }
+    displayCurrentOperation();
+})
 
 
 
