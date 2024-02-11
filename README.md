@@ -1,11 +1,9 @@
-This is a simple browser based calculator application built using JavaScript, HTML and CSS.
-Topics learnt from this project include:
-1. DOM Manipulation
-2. JavaScript Objects and its Utilization
-3. Slightly better understanding of flexbox and its methods.
+### Calculator
+A calculating application that provides some basic arithmetic operations
 
-You can access the calculator from:
-ajahn1999.github.io/Calculator/
+### Design
+![image](https://github.com/AJAHN1999/Calculator/assets/103020052/404e85f9-1416-430c-845f-e5b32026a953)
 
-
-If you find any bugs , please feel free to let me know. 
+### Features
+* Arithmetic operations: addition, subtraction, multiplication, division
+* Utility functions: floating point, percentage, backspace, clear, clear all
